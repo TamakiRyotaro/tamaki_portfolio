@@ -1,0 +1,178 @@
+/* -------------------------------
+            共通設定
+------------------------------- */
+@charset "UTF-8";
+
+@font-face {
+    font-family: "himaji";
+    src: local("Trickster"), url("../font/KFhimaji.otf") format("opentype");
+}
+
+/* 色のプリセット */
+:root {
+    --color-dark-brown: #402900;
+    --color-brown: #6C4A0A;
+    --color-mugicha: #966614;
+    --color-kitune: #D39526;
+    --color-light-brown: #E1D1B0;
+    --color-biscuit: #F8E0BC;
+    --color-bule: #1386A1;
+}
+:root {
+    --bgc-brown: #A38455;
+    --bgc-light-brown: #D5C1A0;
+}
+
+/* フォントのプリセット */
+:root {
+    --font-size-small: 3.2vw;   /* 375px幅で12px */
+    --font-size-medium: 3.7vw;  /* 375px幅で14px */
+    --font-size-large: 5.3vw;   /* 375px幅で20px */
+    --font-size-title: 10vw;    /* 375px幅で45px */
+}
+
+/* 空白のプリセット */
+:root {
+    --spacing-small: 3.2vw;     /* 375px幅で12px */
+    --spacing-medium: 6.4vw;    /* 375px幅で24px */
+    --spacing-large: 17vw;     /* 375px幅で63.784px */
+}
+
+
+
+
+/* -------------------------------
+            共通部分
+------------------------------- */
+body {
+    font-family:"himaji", sans-serif;
+    color: var(--color-dark-brown);
+    font-size: var(--font-size-medium);
+    letter-spacing: 0.1em;
+}
+img {
+    max-width: 100%;
+}
+.flex{
+    display: flex;
+}
+.btn {
+    border-radius: 100vw;   /* 短いほうで自動成型 */
+    padding: 1vw 2vw;
+}
+.wrap-content{
+    max-width: min(100%, 1200px);
+    margin-inline: auto;
+    padding-inline: 24px;
+}
+
+
+
+
+
+/* -------------------------------
+            本体部分
+------------------------------- */
+
+/* ヘッダー
+------------------------------- */
+header{
+        background-color: var(--bgc-brown);
+        padding: 1.5vw;
+}
+.title-header {
+    font-size: var(--font-size-large);
+    text-shadow: var(--color-biscuit) 0.6px 0.6px 0px, var(--color-biscuit) -0.6px 0.6px 0px,var(--color-biscuit) 0.6px -0.6px 0px,var(--color-biscuit) -0.6px -0.6px 0px;
+}
+nav{
+    font-size: var(--font-size-small);
+}
+.nav-flex{
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-list {
+    gap: 1vw;
+}
+.nav-btn {
+    background-color: var(--color-biscuit);
+}
+.nav-btn:hover {
+    filter: brightness(90%);
+}
+
+/* メイン
+------------------------------- */
+/* 見出し*/
+section {
+    padding-top: var(--spacing-large);
+    padding-bottom: var(--spacing-large);
+    text-align: center;
+}
+.title-sec {
+    color: var(--color-mugicha);
+    font-weight: bold;
+    font-size: var(--font-size-title);
+    margin-bottom: var(--spacing-medium);
+}
+main {
+    background-color: var(--bgc-light-brown);
+}
+
+/* ???セクション */
+.game-area {
+    width: 100%;
+    aspect-ratio: 2/1;
+    background-color: var(--color-dark-brown);
+}
+.door{
+    display: inline-block;
+    padding-inline: 5vw;
+    aspect-ratio: 3/5;
+    background-color: var(--color-kitune);
+    
+}
+
+/* workセクション */
+
+/* skillセクション */
+
+/* profileセクション */
+
+
+/* フッター
+------------------------------- */
+footer {
+    background-color: var(--bgc-brown);
+    /* kan-to-do */
+    /* text-shadow: var(--color-biscuit) 0.6px 0.6px 0px, var(--color-biscuit) -0.6px 0.6px 0px, var(--color-biscuit) 0.6px -0.6px 0px, var(--color-biscuit) -0.6px -0.6px 0px; */
+}
+footer .copy-right {
+    text-align: center;
+    font-size: var(--font-size-small);
+    text-shadow: none;
+}
+
+
+
+
+/* -------------------------------
+    ブレイクポイント（768px）
+------------------------------- */ 
+@media (width <=768px) {
+
+    /* ヘッダー
+------------------------------- */
+
+    /* メイン
+------------------------------- */
+    .game-area {
+        height: 70%;
+        aspect-ratio: 2/3;
+        background-color: var(--color-dark-brown);
+    }
+
+    /* フッター
+------------------------------- */
+
+}
