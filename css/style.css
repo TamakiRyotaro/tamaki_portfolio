@@ -110,6 +110,7 @@ section {
     text-align: center;
 }
 .title-sec {
+    letter-spacing: 0.1em;
     color: var(--color-mugicha);
     font-weight: bold;
     font-size: var(--font-size-title);
@@ -130,12 +131,23 @@ main {
     padding-inline: 5vw;
     aspect-ratio: 3/5;
     background-color: var(--color-kitune);
-    
+}
+
+.key{
+    width: 15px;
+    display: inline-block;
 }
 
 /* workセクション */
 
 /* skillセクション */
+.img-list-skill{
+    background-color: var(--color-mugicha);
+    padding: 50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
 
 /* profileセクション */
 
@@ -148,6 +160,7 @@ footer {
     /* text-shadow: var(--color-biscuit) 0.6px 0.6px 0px, var(--color-biscuit) -0.6px 0.6px 0px, var(--color-biscuit) 0.6px -0.6px 0px, var(--color-biscuit) -0.6px -0.6px 0px; */
 }
 footer .copy-right {
+    letter-spacing: 0;
     text-align: center;
     font-size: var(--font-size-small);
     text-shadow: none;
