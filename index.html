@@ -14,13 +14,13 @@
 <body>
     <header>
         <div class="nav-flex flex">
-            <h1 class="title title-header"><a href="index.html">tamaki's<br>portfolio</a></h1>
+            <h1 class="header-title"><a href="index.html">tamaki's portfolio</a></h1>
             <nav>
                 <ul class="nav-list flex">
-                    <li class="nav-item"><a class="nav-btn btn" href="#">???</a></li>
-                    <li class="nav-item"><a class="nav-btn btn" href="#">work</a></li>
-                    <li class="nav-item"><a class="nav-btn btn" href="#">skill</a></li>
-                    <li class="nav-item"><a class="nav-btn btn" href="#">profile</a></li>
+                    <li class="item--nav-list"><a class="btn btn--nav-list" href="#">???</a></li>
+                    <li class="item--nav-list"><a class="btn btn--nav-list" href="#">work</a></li>
+                    <li class="item--nav-list"><a class="btn btn--nav-list" href="#">skill</a></li>
+                    <li class="item--nav-list"><a class="btn btn--nav-list" href="#">profile</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,56 +28,98 @@
 
 
     <main>
-        <div class="wrap-content">
+        <div class="content-wrap">
 
             <!-- 仮のゲーム画面 -->
-            <section class="sec sec-???" id="???">
-                <h2 class="title-sec">???</h2>
-                <div class="game-area">
+            <section class="game-sec" id="game_sec">
+                <h2 class="title--sec title--sec__game">game</h2>
+                <div class="game-area position-parent">
                     <!-- 描画 -->
-                    <a class="door" href="#"></a>
-                    <a class="key" href="#"><img src="./img/key.png" alt=""></a>
+                    <a class="door position-child" href="#"><img src="./img/door.png" alt=""></a>
+                    <a class="key position-child" href="#"><img src="./img/key.png" alt=""></a>
                 </div>
             </section>
 
             <!-- 作品内容(work)セクション -->
-            <section class="sec sec-work">
-                <h2 class="title-sec">work</h2>
-                <div class="list list-work">
-                    <dl class="item item-list-work">
-                        <dt class="title title-list-work">作品名</dt>
+            <section class="work-sec" id="work_sec">
+                <h2 class="title--sec title--sec__work">work</h2>
+                <div class="list--work grid">
+                    <dl class="item--work-list">
+                        <dt class="title--work-list">ポートフォリオサイト</dt>
+                        <dd class="body--work-list">内容内容内容内容内容内容内容内容内容内容内容内容内容内容</dd>
+                    </dl>
+                    <dl class="item--work-list">
+                        <dt class="title--work-list">生活費分担アプリ</dt>
                         <dd>内容内容内容内容内容内容内容内容内容内容内容内容内容内容</dd>
                     </dl>
-                    <dl class="item item-list-work">
-                        <dt class="title title-list-work">作品名</dt>
-                        <dd>内容内容内容内容内容内容内容内容内容内容内容内容内容内容</dd>
-                    </dl>
-                    <dl class="item item-list-work">
-                        <dt class="title title-list-work">作品名</dt>
-                        <dd class="desc body-list-work">内容内容内容内容内容内容内容内容内容内容内容内容内容内容</dd>
+                    <dl class="item--work-list">
+                        <dt class="title--work-list">ファイル共有システム</dt>
+                        <dd class="body--work-list">内容内容内容内容内容内容内容内容内容内容内容内容内容内容</dd>
                     </dl>
                 </div>
             </section>
 
             <!-- 記述一覧(skill)セクション -->
-            <section class="sec sec-skill">
-                <h2 class="title-sec">skill</h2>
+            <section class="skill-sec" id="skill_sec">
+                <h2 class="title--sec title--sec__skill">skill</h2>
                 <!-- ツール系・フロントエンド・バックエンド・データベース -->
-                <div class="list list-skill">
-                    <dl class="item item-skill">
-                        <dt class="title title-list-skill">技術名</dt>
-                        <img class="img img-list-skill" src="./img/WordPress.svg" alt="">
-                        <dd class="body body-list-skill">内容内容内容内容内容内容内容内容内容内容内容内容内容内容</dd>
-                    </dl>
-                </div>
+                <div class="list--skill-sec">
+                    <div class="group--skill-list grid">
+                        <h3 class="title--skill-group">使用言語</h3>
+                        <dl class="list--skill-group list--skill-group__c">
+                            <dt class="title--skill-list">C言語</dt>
+                            <dd class="body--skill-list">
+                                <div class="img--skill-list-body"><img src="./img/Clangage.png" alt=""></div>
+                                <div class="text--skill-list-body">内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
+                            </dd>
+                        </dl>
+                        <dl class="list--skill-group list--skill-group__html">
+                            <dt class="title--skill-list">HTML</dt>
+                            <dd class="body--skill-list">
+                                <div class="img--skill-list-body"><img src="./img/HTML.png" alt=""></div>
+                                <div class="text--skill-list-body">内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
+                            </dd>
+                        </dl>
+                        <dl class="list--skill-group list--skill-group__css">
+                            <dt class="title--skill-list">CSS</dt>
+                            <dd class="body--skill-list">
+                                <div class="img--skill-list-body"><img src="./img/css.png" alt=""></div>
+                                <div class="text--skill-list-body">内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="group--skill-list grid">
+                        <h3 class="title--skill-group">使用ツール</h3>
+                        <dl class="list--skill-group list--skill-group__vs">
+                            <dt class="title--skill-list">Visual Studio Code</dt>
+                            <dd class="body--skill-list">
+                                <div class="img--skill-list-body"><img src="./img/VScode.png" alt=""></div>
+                                <div class="text--skill-list-body">内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
+                            </dd>
+                        </dl>
+                        <dl class="list--skill-group list--skill-group__github">
+                            <dt class="title--skill-list">GitHub</dt>
+                            <dd class="body--skill-list">
+                                <div class="img--skill-list-body"><img src="./img/github.png" alt=""></div>
+                                <div class="text--skill-list-body">内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
+                            </dd>
+                        </dl>
+                        <dl class="list--skill-group list--skill-group__arduino">
+                            <dt class="title--skill-list">Arduino</dt>
+                            <dd class="body--skill-list">
+                                <div class="img--skill-list-body"><img src="./img/arduino.png" alt=""></div>
+                                <div class="text--skill-list-body">内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
+                            </dd>
+                        </dl>
+                    </div>
             </section>
-            
+
             <!-- 自己紹介（profile）セクション -->
-            <section class="sec sec-profile">
-                <h2 class="title-sec">profile</h2>
-                <dl class="list list-profile">
-                    <dt class="title title-list-profile">Tamaki Ryotaro</dt>
-                    <dt class="body body-list-profile"></dt>
+            <section class="prof-sec" id="prof_sec">
+                <h2 class="title--sec title--sec__prof">profile</h2>
+                <dl class="prof-list">
+                    <dt class="title--prof-list">Tamaki Ryotaro</dt>
+                    <dt class="body--prof-list"></dt>
                 </dl>
             </section>
         </div>

@@ -25,17 +25,17 @@
 
 /* フォントのプリセット */
 :root {
-    --font-size-small: 3.2vw;   /* 375px幅で12px */
-    --font-size-medium: 3.7vw;  /* 375px幅で14px */
-    --font-size-large: 5.3vw;   /* 375px幅で20px */
-    --font-size-title: 10vw;    /* 375px幅で45px */
+    --font-size-small: min(3.2vw, 20px);   /* 375px幅で12px */
+    --font-size-medium: min(3.7vw, 28px);  /* 375px幅で14px */
+    --font-size-large: min(5.3vw, 42px);   /* 375px幅で20px */
+    --font-size-title: min(10vw, 80px);    /* 375px幅で40px */
 }
 
 /* 空白のプリセット */
 :root {
     --spacing-small: 3.2vw;     /* 375px幅で12px */
     --spacing-medium: 6.4vw;    /* 375px幅で24px */
-    --spacing-large: 17vw;     /* 375px幅で63.784px */
+    --spacing-large: 12vw;     /* 375px幅で45px */
 }
 
 
@@ -48,7 +48,6 @@ body {
     font-family:"himaji", sans-serif;
     color: var(--color-dark-brown);
     font-size: var(--font-size-medium);
-    letter-spacing: 0.1em;
 }
 img {
     max-width: 100%;
@@ -58,15 +57,22 @@ img {
 }
 .btn {
     border-radius: 100vw;   /* 短いほうで自動成型 */
-    padding: 1vw 2vw;
+    padding: min(1vw, 20px) min(2vw, 30px);
 }
-.wrap-content{
-    max-width: min(100%, 1200px);
+.content-wrap{
+    max-width: min(100%, 1300px);
     margin-inline: auto;
     padding-inline: 24px;
 }
-
-
+.position-parent{
+    position: relative;
+}
+.position-child{
+    position: absolute;
+}
+.grid{
+    display: grid;
+}
 
 
 
@@ -76,17 +82,16 @@ img {
 
 /* ヘッダー
 ------------------------------- */
-header{
-        background-color: var(--bgc-brown);
-        padding: 1.5vw;
+header {
+    background-color: var(--bgc-brown);
+    padding: 1.5vw;
 }
-.title-header {
+.header-title {
     font-size: var(--font-size-large);
-    text-shadow: var(--color-biscuit) 0.6px 0.6px 0px, var(--color-biscuit) -0.6px 0.6px 0px,var(--color-biscuit) 0.6px -0.6px 0px,var(--color-biscuit) -0.6px -0.6px 0px;
+    letter-spacing: 0.05em;
+    text-shadow: var(--color-biscuit) min(0.16vw, 1px) min(0.16vw, 1px) 0px, var(--color-biscuit) max(-0.16vw, -1px) min(0.16vw, 1px) 0px, var(--color-biscuit) min(0.16vw, 1px) max(-0.16vw,-1px) 0px, var(--color-biscuit) max(-0.16vw, -1px) max(-0.16vw,-1px) 0px;
 }
-nav{
-    font-size: var(--font-size-small);
-}
+
 .nav-flex{
     justify-content: space-between;
     align-items: center;
@@ -94,59 +99,130 @@ nav{
 .nav-list {
     gap: 1vw;
 }
-.nav-btn {
+.btn--nav-list {
     background-color: var(--color-biscuit);
 }
-.nav-btn:hover {
+.btn--nav-list:hover {
     filter: brightness(90%);
 }
 
 /* メイン
 ------------------------------- */
-/* 見出し*/
-section {
-    padding-top: var(--spacing-large);
-    padding-bottom: var(--spacing-large);
-    text-align: center;
-}
-.title-sec {
-    letter-spacing: 0.1em;
-    color: var(--color-mugicha);
-    font-weight: bold;
-    font-size: var(--font-size-title);
-    margin-bottom: var(--spacing-medium);
-}
 main {
     background-color: var(--bgc-light-brown);
 }
+/* 見出し*/
+section {
+    padding-top: var(--spacing-large);
+    padding-bottom: var(--spacing-medium);
+    text-align: center;
+}
+.title--sec {
+    margin-bottom: var(--spacing-medium);
+    letter-spacing: 0.05em;
+    color: var(--color-mugicha);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: var(--font-size-title);
 
-/* ???セクション */
+}
+
+
+/*----- gameセクション -----*/
 .game-area {
-    width: 100%;
+    width: 100%;    /* pcでは1200px */
     aspect-ratio: 2/1;
     background-color: var(--color-dark-brown);
 }
-.door{
-    display: inline-block;
-    padding-inline: 5vw;
-    aspect-ratio: 3/5;
+
+.door {
+    right: 30%;
+    bottom: 0;
+    width: min(13vw, 80px); /* 375px幅で50pxくらい */
+    border-bottom: #D39526;
+}
+.door::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: min(18.5vw, 120px);  /* 375px幅で70pxくらい */
+    height: min(1vw, 5px);    /* 375px幅で3.8pxくらい */
     background-color: var(--color-kitune);
 }
 
-.key{
-    width: 15px;
+.key {
+    left: 30%;
+    bottom: 0;
+    width: min(4vw, 25px); /* 375px幅で15px */
     display: inline-block;
 }
 
-/* workセクション */
+/*----- workセクション -----*/
 
-/* skillセクション */
-.img-list-skill{
-    background-color: var(--color-mugicha);
-    padding: 50px;
-    width: 200px;
-    height: 200px;
+
+/*----- skillセクション -----*/
+
+.list--skill-sec .grid {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: min(2vw, 50px); /* 375px幅で7.5px */
+}
+.title--skill-group {
+    grid-row: 1/1;
+    grid-column: 1/4;
+}
+.list--skill-group__c {
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+.list--skill-group__html {
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.list--skill-group__css {
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+
+/* 余白の設定 */
+.group--skill-list{
+    margin-block: var(--spacing-small);
+}
+.title--skill-group{
+    margin-block: var(--spacing-small);
+}
+.img--skill-list-body {
+    margin-block: var(--spacing-small);
+}
+
+/*見た目の装飾*/
+.group--skill-list{
+    background-color: var(--bgc-brown);
+    padding: 2vw;
+}
+.title--skill-group {
+    font-size: var(--font-size-large);
+    text-shadow: var(--color-biscuit) min(0.16vw, 1px) min(0.16vw, 1px) 0px, var(--color-biscuit) max(-0.16vw, -1px) min(0.16vw, 1px) 0px, var(--color-biscuit) min(0.16vw, 1px) max(-0.16vw, -1px) 0px, var(--color-biscuit) max(-0.16vw, -1px) max(-0.16vw, -1px) 0px;
+}
+.list--skill-group {
+    border: 5px solid var(--color-biscuit);
+    padding: 5px;
+}
+.img--skill-list-body {
+    background-color: var(--bgc-light-brown);
+    padding: min(2vw,10px);     /* 375px幅7.5pxくらい */
+    width: min(16vw, 100px);    /* 375px幅60pxくらい */
+    height: min(16vw, 100px);   /* 375px幅で60pxくらい */
     border-radius: 50%;
+}
+
+.img--skill-list-body img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* profileセクション */
@@ -156,16 +232,16 @@ main {
 ------------------------------- */
 footer {
     background-color: var(--bgc-brown);
-    /* kan-to-do */
-    /* text-shadow: var(--color-biscuit) 0.6px 0.6px 0px, var(--color-biscuit) -0.6px 0.6px 0px, var(--color-biscuit) 0.6px -0.6px 0px, var(--color-biscuit) -0.6px -0.6px 0px; */
 }
-footer .copy-right {
-    letter-spacing: 0;
+.copy-right {
     text-align: center;
+}
+
+.copy-right small {
+    /* letter-spacing: 0; */
     font-size: var(--font-size-small);
     text-shadow: none;
 }
-
 
 
 
@@ -174,8 +250,15 @@ footer .copy-right {
 ------------------------------- */ 
 @media (width <=768px) {
 
+    .header-title {
+        font-size: var(--font-size-medium);
+    }
+
     /* ヘッダー
 ------------------------------- */
+    nav {
+        font-size: var(--font-size-small);
+    }
 
     /* メイン
 ------------------------------- */
