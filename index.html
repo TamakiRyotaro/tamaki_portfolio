@@ -13,10 +13,10 @@
 
 <body>
     <header>
-        <div class="nav-flex flex">
+        <div class="nav-flex">
             <h1 class="header-title"><a href="index.html">tamaki's portfolio</a></h1>
             <nav>
-                <ul class="nav-list flex">
+                <ul class="nav-list flex--nav-list">
                     <li class="item--nav-list"><a class="btn btn--nav-list" href="#">???</a></li>
                     <li class="item--nav-list"><a class="btn btn--nav-list" href="#">work</a></li>
                     <li class="item--nav-list"><a class="btn btn--nav-list" href="#">skill</a></li>
@@ -34,6 +34,8 @@
             <section class="game-sec" id="game_sec">
                 <h2 class="title--sec title--sec__game">game</h2>
                 <div class="game-area position-parent">
+                    <p class="game-text">ここは環 怜汰郎のポートフォリオサイトです。<br>私の作品や技術をまとめています。ぜひ私について詳しくなってください。
+                    </p>
                     <!-- 描画 -->
                     <a class="door position-child" href="#"><img src="./img/door.png" alt=""></a>
                     <a class="key position-child" href="#"><img src="./img/key.png" alt=""></a>
@@ -43,7 +45,7 @@
             <!-- 作品内容(work)セクション -->
             <section class="work-sec" id="work_sec">
                 <h2 class="title--sec title--sec__work">work</h2>
-                <div class="list--work grid">
+                <div class="list--work flex--work-list">
                     <dl class="item--work-list">
                         <dt class="title--work-list">ポートフォリオサイト</dt>
                         <dd class="body--work-list">
@@ -62,7 +64,7 @@
                         <dt class="title--work-list">ファイル共有システム</dt>
                         <dd class="body--work-list">
                             <div class="img--work-list-body"><img src="./img/door.png" alt=""></div>
-                            <div class="text--work-list-body">ファイルをzip形式でアップロードして、作成されたパスワードを入力することで誰でもダウンロードすることができます。</div>
+                            <div class="text--work-list-body">ファイルをまとめてzip形式でアップロードして、作成されたパスワードを入力することで誰でもダウンロードすることができます。</div>
                         </dd>
                     </dl>
                 </div>
@@ -73,29 +75,31 @@
                 <h2 class="title--sec title--sec__skill">skill</h2>
                 <!-- ツール系・フロントエンド・バックエンド・データベース -->
                 <div class="list--skill-sec">
-                    <div class="group--skill-list grid">
+                    <div class="group--skill-list">
                         <h3 class="title--skill-group">使用言語</h3>
-                        <dl class="list--skill-group list--skill-group__c">
-                            <dt class="title--skill-list">C言語</dt>
-                            <dd class="body--skill-list">
-                                <div class="img--skill-list-body"><img src="./img/Clangage.png" alt=""></div>
-                                <div class="text--skill-list-body">大学生時代にロボット制御、ゲーム制作で使用しました。</div>
-                            </dd>
-                        </dl>
-                        <dl class="list--skill-group list--skill-group__html">
-                            <dt class="title--skill-list">HTML</dt>
-                            <dd class="body--skill-list">
-                                <div class="img--skill-list-body"><img src="./img/HTML.png" alt=""></div>
-                                <div class="text--skill-list-body">訓練校でWEBサイト制作の時に使いました。</div>
-                            </dd>
-                        </dl>
-                        <dl class="list--skill-group list--skill-group__css">
-                            <dt class="title--skill-list">CSS</dt>
-                            <dd class="body--skill-list">
-                                <div class="img--skill-list-body"><img src="./img/css.png" alt=""></div>
-                                <div class="text--skill-list-body">訓練校でWEBサイト制作の時に使いました。</div>
-                            </dd>
-                        </dl>
+                        <div class="grid--group-skill">
+                            <dl class="list--skill-group list--skill-group__c">
+                                <dt class="title--skill-list">C言語</dt>
+                                <dd class="body--skill-list">
+                                    <div class="img--skill-list-body"><img src="./img/Clangage.png" alt=""></div>
+                                    <div class="text--skill-list-body">大学生時代にロボット制御、ゲーム制作で使用しました。</div>
+                                </dd>
+                            </dl>
+                            <dl class="list--skill-group list--skill-group__html">
+                                <dt class="title--skill-list">HTML</dt>
+                                <dd class="body--skill-list">
+                                    <div class="img--skill-list-body"><img src="./img/HTML.png" alt=""></div>
+                                    <div class="text--skill-list-body">訓練校でWEBサイト制作の時に使いました。</div>
+                                </dd>
+                            </dl>
+                            <dl class="list--skill-group list--skill-group__css">
+                                <dt class="title--skill-list">CSS</dt>
+                                <dd class="body--skill-list">
+                                    <div class="img--skill-list-body"><img src="./img/css.png" alt=""></div>
+                                    <div class="text--skill-list-body">訓練校でWEBサイト制作の時に使いました。</div>
+                                </dd>
+                            </dl>
+                        </div>
                     </div>
                     <div class="group--skill-list grid">
                         <h3 class="title--skill-group">使用ツール</h3>
