@@ -180,6 +180,13 @@ section {
 /*----- skillセクション -----*/
 
 /* レイアウトの設定 */
+.skill-sec-cont-group--flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: var(--spacing-ss);
+}
 .skill-sec-cont-group--grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -203,6 +210,7 @@ section {
 
 /*見た目の装飾*/
 .skill-sec-cont__group{
+    /* border-radius: 100vw; */
     background-color: var(--bgc-brown);
     padding: var(--spacing-ss);
 }
@@ -216,6 +224,7 @@ section {
     align-items: center;
     justify-content: center;
     height: 100%;
+    width: min(20vw,120px);
     border-radius: 100vw;
     border: 2px solid var(--color-biscuit);
     padding: var(--spacing-ss);
@@ -227,7 +236,7 @@ section {
 .skill-sec-cont-group-list-body__img {
     margin-inline: auto;
     background-color: var(--bgc-light-brown);
-    padding: var(--spacing-ss);     /* 375px幅7.5pxくらい */
+    padding: min(1vw,9px);     /* 375px幅7.5pxくらい */
     width: min(10vw, 80px);         /* 375px幅37.5pxくらい */
     height: min(10vw, 80px);        /* 375px幅で37.5pxくらい */
     overflow: hidden;
