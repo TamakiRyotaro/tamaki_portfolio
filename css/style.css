@@ -8,6 +8,10 @@
     src: local("Trickster"), url("../font/KFhimaji.otf") format("opentype");
 }
 
+html{
+    font-size: 62.5%;
+}
+
 /* 色のプリセット */
 :root {
     --color-dark-brown: #402900;
@@ -16,7 +20,7 @@
     --color-kitune: #D39526;
     --color-light-brown: #E1D1B0;
     --color-biscuit: #F8E0BC;
-    --color-bule: #1386A1;
+    --color-blue: #1386A1;
 }
 :root {
     --bgc-brown: #A38455;
@@ -181,6 +185,7 @@ section {
 
 /* レイアウトの設定 */
 .skill-sec-cont-group--flex{
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -196,16 +201,19 @@ section {
 
 /* 余白の設定 */
 .skill-sec-cont__group{
-    margin-block: var(--spacing-ss);
+    margin-bottom: var(--spacing-small);
 }
 .skill-sec-cont-group__title{
     margin-block: var(--spacing-ss);
 }
+.skill-sec-cont-group__list{
+    /* padding: var(--spacing-ss); */
+}
 .skill-sec-cont-group-list__title {
-    margin-bottom: var(--spacing-ss);
+    /* margin-bottom: var(--spacing-ss); */
 }
 .skill-sec-cont-group-list-body__text {
-    margin-top: var(--spacing-ss);
+    /* margin-top: var(--spacing-ss); */
 }
 
 /*見た目の装飾*/
@@ -213,6 +221,7 @@ section {
     /* border-radius: 100vw; */
     background-color: var(--bgc-brown);
     padding: var(--spacing-ss);
+    border-radius: 10px;
 }
 .skill-sec-cont-group__title {
     font-size: var(--font-size-large);
@@ -222,18 +231,46 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100%;
+    justify-content: space-around;
+    /* height: 100%; */
     width: min(20vw,120px);
-    border-radius: 100vw;
+    border-radius: 50px;
     border: 2px solid var(--color-biscuit);
-    padding: var(--spacing-ss);
+    /* background-color: var(--bgc-light-brown); */
+    padding: 30px 0;
 }
 .skill-sec-cont-group-list__title{
     font-size: var(--font-size-list-text);
     width: min(15vw, 100px);
 }
-.skill-sec-cont-group-list-body__img {
+
+/* aaaa */
+.skill-sec-cont-group-list__img {
+    margin-inline: auto;
+    background-color: var(--bgc-light-brown);
+    padding: min(1vw, 9px);
+    /* 375px幅7.5pxくらい */
+    width: min(10vw, 80px);
+    /* 375px幅37.5pxくらい */
+    height: min(10vw, 80px);
+    /* 375px幅で37.5pxくらい */
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.skill-sec-cont-group-list__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.skill-sec-cont-group-list__text {
+    font-size: var(--font-size-list-text);
+    width: min(15vw, 100px);
+}
+/* aaaa */
+
+.skill-sec-cont-group-list__img {
     margin-inline: auto;
     background-color: var(--bgc-light-brown);
     padding: min(1vw,9px);     /* 375px幅7.5pxくらい */
@@ -242,12 +279,12 @@ section {
     overflow: hidden;
     border-radius: 50%;
 }
-.skill-sec-cont-group-list-body__img img{
+.skill-sec-cont-group-list__img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.skill-sec-cont-group-list-body__text{
+.skill-sec-cont-group-list__text{
     font-size: var(--font-size-list-text);
     width: min(15vw, 100px);
 }
